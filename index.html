@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<title>Calculator</title>
+</head>
+<body>
+	<div class="calculator-grid">
+		<div class="output" id="output-el">
+			<div class="previous-item" data-previous-item></div>
+			<div class="current-item" data-current-item></div>
+		</div>
+		<!-- first row -->
+		<button class="color-lgr" data-all-clear>AC</button>
+		<button class="color-lgr" data-operation>%</button>
+		<button class="color-lgr" data-delete>DEL</button>
+		<button class="color-or" data-operation>÷</button>
+		<!-- second row -->
+		<button class="color-gr" data-number>7</button>
+		<button class="color-gr" data-number>8</button>
+		<button class="color-gr" data-number>9</button>
+		<button class="color-or" data-operation>*</button>
+		<!-- third row -->
+		<button class="color-gr" data-number>4</button>
+		<button class="color-gr" data-number>5</button>
+		<button class="color-gr" data-number>6</button>
+		<button class="color-or" data-operation>-</button>
+		<!-- forth row -->
+		<button class="color-gr" data-number>1</button>
+		<button class="color-gr" data-number>2</button>
+		<button class="color-gr" data-number>3</button>
+		<button class="color-or" data-operation>+</button>
+		<!-- fifth row -->
+		<button class="color-gr span-two" data-number>0</button>
+		<button class="color-gr" data-number>.</button>
+		<button class="color-or" data-equals>=</button>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
