@@ -25,7 +25,6 @@ class Calculator {
 		if (this.previousItem !== '') {
 			this.compute()
 		}
-		count = 0
 		this.operation = operation
 		this.previousItem = this.currentItem
 		this.currentItem = ''
@@ -123,7 +122,6 @@ allClearButton.addEventListener('click', button => {
 })
 
 deleteButton.addEventListener('click', button => {
-	count -= 1
 	calculator.delete()
 	calculator.updateDisplay()
 })
