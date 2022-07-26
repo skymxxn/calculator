@@ -15,11 +15,9 @@ class Calculator {
 		this.currentItem = this.currentItem.slice(0, -1)
 	}
 
-	appendNumber(number, count) {
+	appendNumber(number) {
 		if (number === '.' && this.currentItem.includes('.')) return
-		if (count <= 15) {
-			this.currentItem = this.currentItem + number
-		}
+		this.currentItem = this.currentItem + number
 	}
 
 	chooseOperation(operation) {
@@ -99,12 +97,10 @@ const previousItemTextElement = document.querySelector('[data-previous-item]')
 const currentItemTextElement = document.querySelector('[data-current-item]')
 
 const calculator = new Calculator(previousItemTextElement, currentItemTextElement) 
-let count = 0
 
 numberButtons.forEach(button => {
 	button.addEventListener('click', () => {
-		count++
-		calculator.appendNumber(button.textContent, count)
+		calculator.appendNumber(button.textContent)
 		calculator.updateDisplay()
 	})
 })
@@ -122,13 +118,12 @@ equalsButton.addEventListener('click', button => {
 })
 
 allClearButton.addEventListener('click', button => {
-	count = 0
 	calculator.clear()
 	calculator.updateDisplay()
 })
 
 deleteButton.addEventListener('click', button => {
-	count--
+	count -= 1
 	calculator.delete()
 	calculator.updateDisplay()
 })
