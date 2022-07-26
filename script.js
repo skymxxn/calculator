@@ -122,11 +122,13 @@ equalsButton.addEventListener('click', button => {
 })
 
 allClearButton.addEventListener('click', button => {
+	count = 0
 	calculator.clear()
 	calculator.updateDisplay()
 })
 
 deleteButton.addEventListener('click', button => {
+	count--
 	calculator.delete()
 	calculator.updateDisplay()
 })
